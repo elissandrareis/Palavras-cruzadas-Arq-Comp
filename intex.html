@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palavras Cruzadas</title>
+
+    <link rel="shortcut icon" href="imagens/palavras-cruzadas.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="funcoes.js"></script>
+    
+</head>
+<body>
+    <!-- div reponsável por guardar todo grupo de divs -->
+    <div class="global-container">
+        
+        <div class="left-container">
+
+            <div class="imagens">
+                <img src="imagens/Questions.gif" alt="">
+            </div>
+            
+        </div>
+
+        <div class="center-container">
+
+            <div class="cruzadinha">
+                <!-- linha 1 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">  
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">  
+                    <input class="divInput-cruzadinha" type="text">    
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <button onclick="buttonDois()"class="button-cruzadinha">2</button> <!--numero 2-->  
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">  
+                    <input class="divInput-cruzadinha" type="text">  
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 2 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <button onclick="buttonUm()" class="button-cruzadinha">1</button> <!--numero 1-->
+                    <input id="c" onkeyup="CPU1()" class="input-cruzadinha" type="text">     
+                    <input id="p" onkeyup="CPU2()" class="input-cruzadinha" type="text">  
+                    <input id="u" onkeyup="CPU3()" class="input-cruzadinha" type="text">   
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 3 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input id="n" onkeyup="ULA2()" class="input-cruzadinha" type="text">    
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 4 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">  
+                    <button onclick="buttonDez()" class="button-cruzadinha">10</button> <!--numero 10--> 
+                    <input id="c4" onkeyup="CHIPSEL1()" class="input-cruzadinha" type="text">     
+                    <input id="h1" onkeyup="CHIPSEL2()" class="input-cruzadinha" type="text">  
+                    <input id="i" onkeyup="ULA3()" class="input-cruzadinha" type="text">    
+                    <input id="p2" onkeyup="CHIPSEL3()" class="input-cruzadinha" type="text">  
+                    <input class="divInputColor-cruzadinha" type="text">
+                    <input id="s4" onkeyup="CHIPSEL4()" class="input-cruzadinha" type="text">  
+                    <input id="e6" onkeyup="CHIPSEL5()" class="input-cruzadinha" type="text">  
+                    <input id="l2" onkeyup="CHIPSEL6()" class="input-cruzadinha" type="text">   
+                    <input id="e7" onkeyup="CHIPSEL7()" class="input-cruzadinha" type="text">  
+                    <input id="c5" onkeyup="CHIPSEL8()" class="input-cruzadinha" type="text">  
+                    <input id="t2" onkeyup="CHIPSEL9()" class="input-cruzadinha" type="text">   
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 5 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">  
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input id="d" onkeyup="ULA4()" class="input-cruzadinha" type="text">    
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 6 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input id="a" onkeyup="ULA5()" class="input-cruzadinha" type="text">    
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 7 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">  
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <button onclick="buttonQuinze()" class="button-cruzadinha">15</button>  <!--numero 15-->  
+                    <input id="d1" onkeyup="ULA6()" class="input-cruzadinha" type="text">    
+                    <input id="u3" onkeyup="DUALCORE1()" class="input-cruzadinha" type="text"> 
+                    <input id="a13" onkeyup="DUALCORE2()" class="input-cruzadinha" type="text"> 
+                    <input id="l3" onkeyup="DUALCORE3()" class="input-cruzadinha" type="text"> 
+                    <input class="divInputColor-cruzadinha" type="text"> 
+                    <input id="c6" onkeyup="DUALCORE4()" class="input-cruzadinha" type="text"> 
+                    <input id="o5" onkeyup="DUALCORE5()" class="input-cruzadinha" type="text"> 
+                    <input id="r8" onkeyup="DUALCORE6()" class="input-cruzadinha" type="text">   
+                    <input id="e9" onkeyup="DUALCORE7()" class="input-cruzadinha" type="text">   
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 8 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input id="e" onkeyup="ULA7()" class="input-cruzadinha" type="text">
+                    <input class="divInput-cruzadinha" type="text">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">  
+                    <button onclick="buttonSete()" class="button-cruzadinha">7</button>  <!--numero 7-->
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 9 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInputColor-cruzadinha" type="text">    
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input id="f" onkeyup="FLASH1()" class="input-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 10 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">    
+                    <input id="l" onkeyup="ULA8()" class="input-cruzadinha" type="text">    
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input id="l1" onkeyup="FLASH2()" class="input-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 11 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input id="o" onkeyup="ULA9()" class="input-cruzadinha" type="text">    
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">    
+                    <button onclick="buttonOnze()" class="button-cruzadinha">11</button> <!--numero 11-->
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <button onclick="buttonQuatro()" class="button-cruzadinha">4</button><!--numero 4-->
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input id="a7" onkeyup="FLASH3()" class="input-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 12 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">   
+                    <button onclick="buttonTres()" class="button-cruzadinha">3</button> <!--numero 3--> 
+                    <input id="r1" onkeyup="REG1()" class="input-cruzadinha" type="text"> 
+                    <input id="e3" onkeyup="REG2()" class="input-cruzadinha" type="text">   
+                    <input id="g" onkeyup="ULA10()" class="input-cruzadinha" type="text"> 
+                    <input id="i4" onkeyup="REG3()" class="input-cruzadinha" type="text">   
+                    <input id="s"  onkeyup="REG4()" class="input-cruzadinha" type="text"> 
+                    <input id="t1" onkeyup="REG5()" class="input-cruzadinha" type="text"> 
+                    <input id="r2" onkeyup="REG6()" class="input-cruzadinha" type="text"> 
+                    <input id="a5" onkeyup="REG7()" class="input-cruzadinha" type="text"> 
+                    <input id="d3" onkeyup="REG8()" class="input-cruzadinha" type="text"> 
+                    <input id="o1" onkeyup="REG9()" class="input-cruzadinha" type="text"> 
+                    <input id="r3" onkeyup="REG10()" class="input-cruzadinha" type="text"> 
+                    <input id="e4" onkeyup="REG11()" class="input-cruzadinha" type="text"> 
+                    <input id="s1" onkeyup="REG12()" class="input-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 13 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">  
+                    <input id="i1" onkeyup="ULA11()" class="input-cruzadinha" type="text">    
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input id="d6" onkeyup="ADRESS1()" class="input-cruzadinha" type="text">   
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input id="a6" onkeyup="RAM1()" class="input-cruzadinha" type="text">   
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input id="h" onkeyup="FLASH4()" class="input-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 14 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input id="c2" onkeyup="ULA12()" class="input-cruzadinha" type="text">  
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input id="r7" onkeyup="ADRESS2()" class="input-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">  
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input id="m1" onkeyup="RAM2()" class="input-cruzadinha" type="text">  
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 15 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">   
+                    <button onclick="buttonSeis()" class="button-cruzadinha">6</button> <!-- numero 6--> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">    
+                    <button onclick="buttonTreze()" class="button-cruzadinha">13</button> <!-- numero 13-->
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">    
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input id="a1" onkeyup="ULA13()" class="input-cruzadinha" type="text">   
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input id="e8" onkeyup="ADRESS3()" class="input-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 16 -->
+                <div class="linhas">
+                    <button onclick="buttonOito()" class="button-cruzadinha">8</button> <!-- numero 8-->  
+                    <input id="m4" onkeyup="MEMODEMASSA1()" class="input-cruzadinha" type="text"> 
+                    <input id="e5" onkeyup="EPROM1()" class="input-cruzadinha" type="text"> 
+                    <input id="m5" onkeyup="MEMODEMASSA2()" class="input-cruzadinha" type="text">  
+                    <input id="o4" onkeyup="MEMODEMASSA3()" class="input-cruzadinha" type="text">    
+                    <input id="r6" onkeyup="MEMODEMASSA4()" class="input-cruzadinha" type="text">  
+                    <input id="i5" onkeyup="MEMODEMASSA5()" class="input-cruzadinha" type="text">  
+                    <input id="a8" onkeyup="MEMODEMASSA6()" class="input-cruzadinha" type="text">   
+                    <input class="divInputColor-cruzadinha" type="text">   
+                    <input id="d4" onkeyup="MEMODEMASSA7()" class="input-cruzadinha" type="text">    
+                    <button class="button-cruzadinha1">E</button>
+                    <input class="divInputColor-cruzadinha" type="text"> 
+                    <input id="m6" onkeyup="MEMODEMASSA8()" class="input-cruzadinha" type="text">   
+                    <input id="a9" onkeyup="MEMODEMASSA9()" class="input-cruzadinha" type="text"> 
+                    <input id="s2" onkeyup="MEMODEMASSA10()" class="input-cruzadinha" type="text"> 
+                    <input id="s3" onkeyup="MEMODEMASSA11()" class="input-cruzadinha" type="text">   
+                    <input id="a10" onkeyup="MEMODEMASSA12()" class="input-cruzadinha" type="text">  
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 17 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input id="p1" onkeyup="EPROM2()" class="input-cruzadinha" type="text">   
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input id="cinco" onkeyup="I51()" class="input-cruzadinha" type="text">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input id="a3" onkeyup="ULA14()" class="input-cruzadinha" type="text">   
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input id="s5" onkeyup="ADRESS4()" class="input-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 18 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input id="r5" onkeyup="EPROM3()" class="input-cruzadinha" type="text">   
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">  
+                    <input id="r" onkeyup="ULA15()" class="input-cruzadinha" type="text">  
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">    
+                    <input class="divInputColor-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <button onclick="buttonCinco()" class="button-cruzadinha">5</button> <!--numero 5-->
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 19 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input id="o3" onkeyup="EPROM4()" class="input-cruzadinha" type="text">   
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input id="i2" onkeyup="ULA16()" class="input-cruzadinha" type="text">  
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input id="b" onkeyup="ADRESS5()" class="input-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input id="r4" onkeyup="ROM1()" class="input-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 20 -->
+                <div class="linhas">
+                    <button onclick="buttonNove()" class="button-cruzadinha">9</button> <!--numero 9-->
+                    <input id="d5" onkeyup="DMA1()" class="input-cruzadinha" type="text">  
+                    <input id="m3" onkeyup="EPROM5()" class="input-cruzadinha" type="text">  
+                    <input id="a11" onkeyup="DMA2()" class="input-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input id="t" onkeyup="ULA17()" class="input-cruzadinha" type="text">  
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">  
+                    <button onclick="buttonDezesseis()" class="button-cruzadinha">16</button> <!--numero 16-->
+                    <input id="q" onkeyup="QUADCORE1()" class="input-cruzadinha" type="text">  
+                    <input id="u1" onkeyup="ADRESS6()" class="input-cruzadinha" type="text">  
+                    <input id="a14" onkeyup="QUADCORE2()" class="input-cruzadinha" type="text">  
+                    <input id="d8" onkeyup="QUADCORE3()" class="input-cruzadinha" type="text">  
+                    <input class="divInputColor-cruzadinha" type="text">  
+                    <input id="c7" onkeyup="QUADCORE4()" class="input-cruzadinha" type="text">  
+                    <input id="o2" onkeyup="ROM2()" class="input-cruzadinha" type="text">  
+                    <input id="r9" onkeyup="QUADCORE5()" class="input-cruzadinha" type="text">  
+                    <input id="e10" onkeyup="QUADCORE6()" class="input-cruzadinha" type="text">  
+                </div>
+
+                <!-- linha 21 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input id="m" onkeyup="ULA18()" class="input-cruzadinha" type="text">     
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input id="s6" onkeyup="ADRESS7()" class="input-cruzadinha" type="text">   
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input id="m2" onkeyup="ROM3()" class="input-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 22 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input id="e2" onkeyup="ULA19()" class="input-cruzadinha" type="text">    
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 23 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">   
+                    <input id="d2" onkeyup="ULA20()" class="input-cruzadinha" type="text">    
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 24 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">  
+                    <button onclick="buttonQuatorze()" class="button-cruzadinha">14</button> <!--numero 14-->
+                    <input id="i3" onkeyup="ULA21()" class="input-cruzadinha" type="text">  
+                    <input id="sete" onkeyup="I71()" class="input-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 25 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">    
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input id="c3" onkeyup="ULA22()" class="input-cruzadinha" type="text">     
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+
+                <!-- linha 26 -->
+                <div class="linhas">
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text">  
+                    <button onclick="buttonDoze()" class="button-cruzadinha">12</button> <!--numero 12--> 
+                    <input id="d7" onkeyup="DATABUS1()" class="input-cruzadinha" type="text"> 
+                    <input id="a12" onkeyup="DATABUS2()" class="input-cruzadinha" type="text"> 
+                    <input id="t3" onkeyup="DATABUS3()" class="input-cruzadinha" type="text"> 
+                    <input id="a4" onkeyup="ULA23()" class="input-cruzadinha" type="text">    
+                    <input class="divInputColor-cruzadinha" type="text"> 
+                    <input id="b1" onkeyup="DATABUS4()" class="input-cruzadinha" type="text"> 
+                    <input id="u2" onkeyup="DATABUS5()" class="input-cruzadinha" type="text"> 
+                    <input id="s7" onkeyup="DATABUS6()" class="input-cruzadinha" type="text">   
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                    <input class="divInput-cruzadinha" type="text"> 
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="rigth-containerMae">
+            
+            <div class="right-container">
+
+                <div class="imagens">
+                    <img src="imagens/Team goals-amico.png" alt="">
+                </div>
+
+            </div>
+
+            <div class="right-container2">
+                <span id="spanText"></span>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html> 
